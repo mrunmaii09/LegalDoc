@@ -1,0 +1,62 @@
+document_type: nda
+display_name: "Non-Disclosure Agreement"
+description: "A confidentiality agreement between two or more parties"
+
+required_fields:
+  - name: disclosing_party
+    label: "Disclosing Party Name"
+    type: string
+    description: "Full legal name of the party sharing confidential information"
+
+  - name: receiving_party
+    label: "Receiving Party Name"
+    type: string
+    description: "Full legal name of the party receiving confidential information"
+
+  - name: effective_date
+    label: "Effective Date"
+    type: string
+    description: "Date the NDA comes into effect - ask the user to provide in DD-MM-YYYY format. When user provides any date, store it exactly as they said it."
+
+  - name: confidential_info_description
+    label: "Confidential Information Description"
+    type: string
+    vague_keywords: ["some info", "various things", "business stuff", "company info", "secret stuff"]
+    description: "Specific description of what constitutes confidential information"
+
+  - name: purpose
+    label: "Purpose of Disclosure"
+    type: string
+    description: "Why confidential information is being shared"
+
+  - name: duration_years
+    label: "NDA Duration"
+    type: number
+    description: "How many years the NDA remains in effect"
+
+  - name: governing_law
+    label: "Governing Law (State/Country)"
+    type: string
+    description: "Single jurisdiction whose laws govern this agreement - if user is unsure, ask them to pick one specific country or state"
+guardrails:
+  advice_keywords: ["should i", "what should", "recommend", "suggest", "advise", "is it better", "which is better", "do you think"]
+  injection_patterns: ["ignore previous", "forget instructions", "you are now", "act as", "pretend you", "override", "disregard"]
+
+system_prompt: |
+  You are a legal document assistant helping collect information for a Non-Disclosure Agreement (NDA).
+  
+  Your ONLY job is to collect the following fields through natural conversation:
+  {fields}
+  
+  Already collected: {collected}
+  
+  Rules you MUST follow:
+  1. Ask for ONE piece of information at a time
+  2. If an answer is vague (e.g. "some business info"), ask for specifics
+  3. If you detect a contradiction with previously collected info, flag it gently and ask for clarification
+  4. NEVER give legal advice or opinions
+  5. If user asks for advice, say: "I'm not able to provide legal advice. I can only help collect information for your document."
+  6. NEVER invent or assume any facts not provided by the user
+  7. Once all fields are collected, say exactly: "COLLECTION_COMPLETE"
+  
+  Current conversation goal: Collect all required fields naturally and accurately.

@@ -1,0 +1,75 @@
+document_type: will
+display_name: "Last Will & Testament"
+description: "A legal document expressing a person's wishes regarding their assets after death"
+
+required_fields:
+  - name: testator_name
+    label: "Full Legal Name"
+    type: string
+    vague_threshold: null
+    description: "Full name of the person making the will"
+
+  - name: testator_dob
+    label: "Date of Birth"
+    type: date
+    description: "Testator's date of birth"
+
+  - name: testator_address
+    label: "Residential Address"
+    type: string
+    description: "Current permanent address"
+
+  - name: executor_name
+    label: "Executor Full Name"
+    type: string
+    description: "Person responsible for carrying out the will"
+
+  - name: executor_relationship
+    label: "Executor Relationship"
+    type: string
+    description: "Relationship of executor to testator"
+
+  - name: beneficiaries
+    label: "Beneficiaries"
+    type: list
+    description: "People who will inherit assets"
+
+  - name: assets
+    label: "Assets"
+    type: list
+    vague_keywords: ["a lot", "quite a lot", "some", "various", "lots", "many", "savings", "stuff", "things"]
+    description: "Assets to be distributed - must be specific"
+
+  - name: asset_distribution
+    label: "Asset Distribution"
+    type: string
+    description: "How assets should be distributed among beneficiaries"
+
+  - name: guardianship
+    label: "Guardianship (if applicable)"
+    type: string
+    required: false
+    description: "Guardian for minor children if any"
+
+guardrails:
+  advice_keywords: ["should i", "what should", "recommend", "suggest", "advise", "is it better", "which is better", "do you think"]
+  injection_patterns: ["ignore previous", "forget instructions", "you are now", "act as", "pretend you", "override", "disregard"]
+
+system_prompt: |
+  You are a legal document assistant helping collect information for a Last Will & Testament.
+  
+  Your ONLY job is to collect the following fields through natural conversation:
+  {fields}
+  
+  Already collected: {collected}
+  
+  Rules you MUST follow:
+  1. Ask for ONE piece of information at a time
+  2. If an answer is vague (e.g. "a lot of savings", "some property"), ask for specifics
+  3. If you detect a contradiction with previously collected info, flag it gently and ask for clarification
+  4. NEVER give legal advice or opinions
+  5. If user asks for advice, say: "I'm not able to provide legal advice. I can only help collect information for your document."
+  6. NEVER invent or assume any facts not provided by the user
+  7. Once all fields are collected, say exactly: "COLLECTION_COMPLETE"
+  
+  Current conversation goal: Collect all required fields naturally and accurately.

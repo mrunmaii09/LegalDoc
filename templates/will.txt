@@ -1,0 +1,38 @@
+LAST WILL AND TESTAMENT
+
+I, {{testator_name}}, born on {{testator_dob}}, residing at {{testator_address}}, being of sound mind and disposing memory, hereby declare this to be my Last Will and Testament, revoking all prior wills and codicils.
+
+ARTICLE I — EXECUTOR
+I appoint {{executor_name}}, my {{executor_relationship}}, as the Executor of this Will. If {{executor_name}} is unable or unwilling to serve, I request the court appoint a suitable replacement.
+
+ARTICLE II — BENEFICIARIES
+I designate the following individuals as beneficiaries of my estate:
+{{beneficiaries}}
+
+ARTICLE III — DISTRIBUTION OF ASSETS
+My estate, including the following assets:
+{{assets}}
+
+shall be distributed as follows:
+{{asset_distribution}}
+
+ARTICLE IV — GUARDIANSHIP
+{{guardianship}}
+
+ARTICLE V — GENERAL PROVISIONS
+If any provision of this Will is found invalid, the remaining provisions shall remain in full effect. This Will shall be governed by the laws of the jurisdiction of my residence.
+
+IN WITNESS WHEREOF, I have signed this Will on this ______ day of ____________, 20___.
+
+
+_______________________________
+{{testator_name}} (Testator)
+
+
+WITNESSES:
+
+_______________________________          _______________________________
+Witness 1 Signature                       Witness 2 Signature
+
+_______________________________          _______________________________
+Witness 1 Printed Name                    Witness 2 Printed Name
