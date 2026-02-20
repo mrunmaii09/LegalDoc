@@ -108,3 +108,65 @@ Open `http://localhost:8000`
 - **Free tier**: Generous for prototyping
 - **Model**: Llama 3.1 8B (conversation) + 70B (drafting) — right size for each task
 - **Deterministic**: Temperature=0 supported for reproducible outputs
+
+## Screenshots
+
+### Document Selection
+## Screenshots
+
+### Document Selection
+<img width="1912" height="849" alt="image" src="https://github.com/user-attachments/assets/53aa88a2-6c65-4d15-a8aa-7c52992a067d" />
+
+### Conversation Flow
+<img width="1914" height="712" alt="image" src="https://github.com/user-attachments/assets/571ab259-c941-4a8b-aa3a-ef278ba82a09" />
+
+
+### Guardrail Blocked
+<img width="1893" height="385" alt="image" src="https://github.com/user-attachments/assets/8fd3b943-321c-4475-8e59-5fd294df6fac" />
+
+
+### Generated Document
+NON-DISCLOSURE AGREEMENT
+
+This Non-Disclosure Agreement ("Agreement") is entered into as of 20-02-2026,
+
+BETWEEN:
+Anne Johnson ("Disclosing Party")
+
+AND:
+TechCorp Pvt Ltd ("Receiving Party")
+
+ARTICLE I — CONFIDENTIAL INFORMATION
+For purposes of this Agreement, "Confidential Information" means:
+business strategies
+
+ARTICLE II — PURPOSE
+The Receiving Party agrees to receive Confidential Information solely for the following purpose:
+colaboration
+
+ARTICLE III — OBLIGATIONS
+The Receiving Party agrees to:
+1. Hold all Confidential Information in strict confidence
+2. Not disclose Confidential Information to any third party without prior written consent
+3. Use Confidential Information solely for the Purpose stated above
+4. Protect Confidential Information with at least the same degree of care used for its own confidential information
+
+ARTICLE IV — TERM
+This Agreement shall remain in effect for a period of 3 year(s) from the Effective Date.
+
+ARTICLE V — GOVERNING LAW
+This Agreement shall be governed by and construed in accordance with the laws of India.
+
+ARTICLE VI — GENERAL
+This Agreement constitutes the entire agreement between the parties with respect to its subject matter. If any provision is found unenforceable, the remainder of the Agreement shall continue in effect.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.
+
+
+_______________________________          _______________________________
+Anne Johnson                      TechCorp Pvt Ltd
+Disclosing Party                          Receiving Party
+
+Date: _________________________          Date: _________________________
+
+
